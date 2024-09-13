@@ -1,0 +1,43 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden; /* Hide scrollbars */
+}
+
+.container {
+    display: flex;
+    height: 100vh; /* Full viewport height */
+    width: 100vw; /* Full viewport width */
+}
+
+.spline-container {
+    flex: 1; /* Takes up half of the container width */
+    background-color: #f0f0f0; /* Background color for the 3D model side */
+    display: flex;
+    justify-content: center; /* Center the 3D model horizontally */
+    align-items: center; /* Center the 3D model vertically */
+}
+
+.spline-container spline-viewer {
+    width: 120%; /* Adjust width as needed */
+    height: 120%; /* Adjust height as needed */
+    transform: scale(1.2); /* Scale the content as needed */
+    transform-origin: center;
+}
+
+.text-container {
+    flex: 1; /* Takes up half of the container width */
+    background-color: #ffffff; /* Background color for the text side */
+    display: flex;
+    justify-content: center; /* Center the text horizontally */
+    align-items: center; /* Center the text vertically */
+    padding: 20px; /* Add padding if needed */
+    box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
+}
+
+.text-container p {
+    font-size: 24px; /* Adjust text size as needed */
+    text-align: center;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contact</title>
+    <!-- Include Poppins Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/contact.css">
+    <link rel="stylesheet" href="./css/menu.css">
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.25/build/spline-viewer.js"></script>
+</head>
+<body>
+    <!-- Background Spline 3D Object -->
+    <div class="background-spline">
+        <spline-viewer loading-anim-type="spinner-small-dark" url="https://prod.spline.design/GwMa7X8x37pWpaiw/scene.splinecode"></spline-viewer>
+    </div>
+
+    <div id="menuContainer">
+        <button id="menuButton" class="fancy-button">☰ Menu</button>
+        <div id="dropdownMenu" class="dropdown hidden">
+            <a href="./index.html" class="dropdown-item">Home</a>
+            <a href="./explore.html" class="dropdown-item">Explore</a>
+            <a href="./events.html" class="dropdown-item">Events</a>
+            <a href="./about.html" class="dropdown-item">About Us</a>
+            <a href="./contact.html" class="dropdown-item">Contact Us</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="contact">
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.5765607734565!2d100.27845127583265!3d5.328541894650014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x304ac12fbc15623d%3A0xfd927850566aef67!2sSPICE%20Arena!5e0!3m2!1sen!2smy!4v1724336621638!5m2!1sen!2smy" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="form">
+                <h1>Contact Us</h1>
+                <form action="https://formsubmit.co/d2e57a5c72d487dd24d4d59784b19744" method="POST">
+                    <input type="text" name="Name" required placeholder="Name">
+                    <input type="email" name="Email" required placeholder="Email">
+                    <input type="text" name="Subject" required placeholder="Subject">
+                    <textarea name="Message" required placeholder="Message"></textarea>
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_next" value="http://127.0.0.1:5502/thankyou.html">
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+        <div class="three-d-object">
+            <!-- Text above the 3D object -->
+            <div class="three-d-object-text">Thanks for reaching out!</div>
+            <spline-viewer loading-anim-type="spinner-small-dark" url="https://prod.spline.design/S3Ywx64Q6R5pzeGi/scene.splinecode"></spline-viewer>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('menuButton').addEventListener('click', function() {
+            var dropdownMenu = document.getElementById('dropdownMenu');
+            dropdownMenu.classList.toggle('visible');
+            dropdownMenu.classList.toggle('hidden');
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="./css/about.css">
+    <link rel="stylesheet" href="./css/menu.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="menuContainer">
+        <button id="menuButton" class="fancy-button">☰ Menu</button>
+        <div id="dropdownMenu" class="dropdown hidden">
+        <a href="./index.html" class="dropdown-item">Home</a>
+        <a href="./explore.html" class="dropdown-item">Explore</a>
+        <a href="./events.html" class="dropdown-item">Events</a>
+        <a href="./about.html" class="dropdown-item">About Us</a>
+        <a href="./contact.html" class="dropdown-item">Contact Us</a>
+        </div>
+    </div>
+
+    <!-- Background object -->
+    <div class="background-container">
+        <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.21/build/spline-viewer.js"></script>
+        <spline-viewer loading-anim-type="spinner-small-dark" url="https://prod.spline.design/KyuaOGEryftrsm1q/scene.splinecode"></spline-viewer>
+    </div>
+
+    <!-- Text container with title and about us section -->
+    <div class="text-container">
+        <h1>Welcome to Our Mall!</h1>
+        <p>
+            At our mall, we bring together the best shopping, dining, and entertainment experiences under one roof. We look forward to welcoming you!<br><br>
+            Contact      : 011-123-1234<br>
+            Opening hours: 10am-10pm, Every day<br>
+            Location:      SPICE Arena, 108, Jalan Tun Dr Awang, Bayan Baru, 11900 Bayan Lepas
+        </p>
+    </div>
+    
+
+    <!-- Centered 3D object -->
+    <div class="centered-object-container">
+        <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.21/build/spline-viewer.js"></script>
+        <spline-viewer loading-anim-type="spinner-small-light" url="https://prod.spline.design/bXRC4QLBAMkXQQpy/scene.splinecode"></spline-viewer>
+    </div>
+
+    <!-- JavaScript for Dropdown Menu -->
+    <script>
+        document.getElementById('menuButton').addEventListener('click', function() {
+            var dropdownMenu = document.getElementById('dropdownMenu');
+            dropdownMenu.classList.toggle('visible');
+            dropdownMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+/* Ensure the body and html take up the full height */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+/* Background container styling */
+.background-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Hide overflow of the background */
+    z-index: 1;
+}
+
+
+/* Make sure the spline viewer fills its container and then some */
+spline-viewer {
+    width: 120%; /* Increase size to zoom in */
+    height: 120%; /* Increase size to zoom in */
+    position: absolute;
+    top: -10%; /* Adjust positioning to keep the main part centered */
+    left: -10%; /* Adjust positioning to keep the main part centered */
+    background: transparent; /* Ensure spline viewer background is transparent */
+}

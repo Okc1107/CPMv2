@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/explore.css">
+    <link rel="stylesheet" href="./css/menu.css">
+</head>
+<body>
+    <div id="menuContainer">
+        <button id="menuButton" class="fancy-button">☰ Menu</button>
+        <div id="dropdownMenu" class="dropdown hidden">
+        <a href="./index.html" class="dropdown-item">Home</a>
+        <a href="./explore.html" class="dropdown-item">Explore</a>
+        <a href="./events.html" class="dropdown-item">Events</a>
+        <a href="./about.html" class="dropdown-item">About Us</a>
+        <a href="./contact.html" class="dropdown-item">Contact Us</a>
+        </div>
+    </div>
+        
+    <!-- Background object -->
+    <div class="background-container">
+        <!-- <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.21/build/spline-viewer.js"></script>
+        <spline-viewer loading-anim-type="spinner-small-dark" url="https://prod.spline.design/8JJPK0KI842XE8GY/scene.splinecode"></spline-viewer> -->
+
+        <!-- <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.21/build/spline-viewer.js"></script>
+        <spline-viewer loading-anim-type="spinner-small-dark" url="https://prod.spline.design/NMkqqzWsXobJo6KZ/scene.splinecode"></spline-viewer> -->
+
+        <!-- Red waves -->
+        <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.24/build/spline-viewer.js"></script>
+        <spline-viewer loading-anim-type="spinner-small-dark" url="https://prod.spline.design/hk2A1-PH0TNtPRN3/scene.splinecode"></spline-viewer>
+
+        <!--Webby-->
+        <!-- <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.24/build/spline-viewer.js"></script>
+        <spline-viewer loading-anim-type="spinner-small-dark" url="https://prod.spline.design/r31Qkho5-fhDen9I/scene.splinecode"></spline-viewer> -->
+
+    </div>
+
+    <!-- Search Bar -->
+    <div class="search-container">
+        <div class="search-box">
+            <span class="search-icon" onclick="performSearch()">&#128269;</span> <!-- Magnifying Glass Icon -->
+            <input type="text" id="search-bar" placeholder="Search for a shop...">
+        </div>
+    </div>
+
+    <!-- Text Boxes Container -->
+    <div class="text-boxes-container">
+        <div class="text-box">
+            <h2>Fashion & Accessories</h2>
+            <ul>
+                <li>L1-1A-Uniqlo</li>
+                <li>L1-2A-Cotton On</li>
+                <li>L1-3A-Zara</li>
+                <li>L1-4A-H&M</li>
+                <li>L1-5A-Guess</li>
+            </ul>
+        </div>
+        <div class="text-box">
+            <h2>Electronics</h2>
+            <ul>
+                <li><a href="./NG/nexusgaming/index.html" class="underline-on-hover">L2-1A-Nexus Gaming</a></li>
+                <li>L2-2A-Samsung</li>
+                <li>L2-3A-Dell</li>
+                <li>L2-4A-HP</li>
+                <li>L2-5A-Apple Store</li>
+            </ul>
+        </div>
+        <div class="text-box">
+            <h2>Food & Beverage</h2>
+            <ul>
+                <li>L3-1A-ZUS Coffee</li>
+                <li>L3-2A-The Chicken Rice Shop</li>
+                <li>L3-3A-Ramly Burger</li>
+                <li>L3-4A-Makbul Nasi Kandar</li>
+                <li>L3-5A-Secret Recipe</li>                
+            </ul>
+        </div>
+        <div class="text-box">
+            <h2>Home & Living</h2>
+            <ul>
+                <li>L4-1A-IKEA</li>
+                <li>L4-2A-Home Depot</li>
+                <li>L4-3A-Williams Sonoma</li>
+                <li>L4-4A-Pottery Barn</li>
+                <li>L4-5A-Bed Bath & Beyond</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="./js/explore.js"></script>
+    <script>
+        document.getElementById('menuButton').addEventListener('click', function() {
+            var dropdownMenu = document.getElementById('dropdownMenu');
+            dropdownMenu.classList.toggle('visible');
+            dropdownMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

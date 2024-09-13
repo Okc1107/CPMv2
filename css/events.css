@@ -1,0 +1,140 @@
+/* Ensure the body and html take up the full height */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Poppins', sans-serif; /* Change font to Poppins */
+    background-color: #f0f0f0;
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+/* Background container to stay fixed during scroll */
+.background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 120vw; /* Use viewport width for full screen */
+    height: 120vh; /* Use viewport height for full screen */
+    z-index: 0; /* Keep it behind other content */
+    overflow: hidden;
+    transform: translateZ(0); /* Enable hardware acceleration */
+}
+
+/* Header container styling */
+.header-container {
+    text-align: center;
+    margin: 20px auto; /* Center the container horizontally with automatic margins */
+    z-index: 2;
+    width: fit-content;
+    position: relative;
+    padding: 10px;
+}
+
+/* Header title styling */
+.header-container h1 {
+    font-size: 2.5em;
+    color: #2c3e50;
+}
+
+/* Countdown timer styling */
+#countdown {
+    font-size: 1.5em;
+    color: #e74c3c;
+    margin-top: 10px;
+}
+
+
+/* General container styling */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50%; /* Increase height of the container (previously 35%) */
+    width: 80%;  /* Adjust width if needed */
+    margin: 30px auto; /* Center container horizontally and add margin between containers */
+    border: 5px solid; /* Border width to match hover state */
+    border-color: #e74c3c; /* Default border color */
+    position: relative;
+    z-index: 1; /* Ensure containers are above the background */
+    overflow: hidden;
+    box-sizing: border-box; /* Include border in container sizing */
+    opacity: 1; /* Ensure containers are visible */
+    transform: translateX(0); /* Ensure containers are in position */
+    transition: border-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+}
+
+/* Hover effect for container border */
+.container:hover {
+    border-color: transparent; /* Hide default border color on hover */
+    border-width: 5px; /* Match the border width on hover */
+    animation: rainbowBorder 2s linear infinite; /* Apply rainbow border animation */
+    transform: translateY(-5px); /* Bob effect on hover */
+}
+
+/* Rainbow border effect */
+@keyframes rainbowBorder {
+    0% { border-color: red; }
+    14% { border-color: orange; }
+    28% { border-color: yellow; }
+    42% { border-color: green; }
+    57% { border-color: blue; }
+    71% { border-color: indigo; }
+    85% { border-color: violet; }
+    100% { border-color: red; }
+}
+
+/* Object container styling */
+.object-container {
+    width: 50%; /* Keep the container size in line with text container */
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    box-sizing: border-box; /* Include padding and border in width/height calculation */
+    transform: translateZ(0); /* Enable hardware acceleration */
+}
+
+/* Text container styling */
+.text-container {
+    width: 50%; /* Text container now equal in size to object container */
+    height: 100%;
+    background-color: #2c3e50; /* Dark blue background color */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box; /* Include padding and border in width/height calculation */
+}
+
+/* Text content styling */
+.text-content {
+    padding: 20px; /* Space around text content */
+    text-align: center; /* Center align text */
+}
+
+/* Title styling */
+.text-content h1 {
+    font-size: 2em; /* Larger font size for title */
+    margin-bottom: 20px; /* Space between title and text */
+}
+
+/* Paragraph styling */
+.text-content p {
+    font-size: 1.2em; /* Slightly larger font size for readability */
+}
+
+/* Spline viewer styling to reduce the size of the 3D object */
+spline-viewer {
+    width: 120%; /* Increase size of the 3D object */
+    height: 120%; /* Increase size of the 3D object */
+    top: 10%; /* Adjust positioning to keep the object centered */
+    left: 10%; /* Adjust positioning to keep the object centered */
+    background: transparent; /* Ensure spline viewer background is transparent */
+    overflow: hidden;
+    transform: translateZ(0); /* Enable hardware acceleration */
+}
+
+/* Create more space at the top of the screen */
+body {
+    padding-top: 60px; /* Triple the space at the top */
+}

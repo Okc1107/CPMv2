@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <script src="./js/cart.js" defer></script>
+  <link rel="stylesheet" href="./css/styles.css" />
+  <title>Cart - Nexus Gaming</title>
+</head>
+<body>
+  <div class="top_nav">
+    <div class="container top_nav_container">
+      <div class="top_nav_wrapper">
+        <p class="tap_nav_p">
+          30% Off on all Action games till the end of July! SHOP NOW 
+        </p>
+        <a href="./index.html" class="top_nav_link">SHOP NOW</a>
+      </div>
+    </div>
+  </div>
+  <nav class="nav">
+    <div class="container nav_container">
+      <a href="./index.html" class="nav_logo">NEXUS GAMING</a>
+      <ul class="nav_list">
+        <li class="nav_item"><a href="index.html" class="nav_link">Home</a></li>
+        <li class="nav_item"><a href="./about.html" class="nav_link">About</a></li>
+        <li class="nav_item"><a href="./contact.html" class="nav_link">Contact</a></li>
+        <li class="nav_item">
+          <a href="./sign-up.html" class="nav_link">Sign up</a>
+        </li>
+      </ul>
+      <div class="nav_items">
+        <form action="#" class="nav_form">
+          <input
+            type="text"
+            class="nav_input"
+            placeholder="search here...." />
+          <img src="./image/search.png" alt="" class="nav_search" />
+        </form>
+        <img src="./image/heart.png" alt="" class="nav_heart" />
+        <a href="./cart.html">
+          <img src="./image/cart.png" alt="" class="nav_cart" />
+        </a>
+      </div>
+      <span class="hamburger">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-6 h-6">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+      </span>
+    </div>
+  </nav>
+  <nav class="mobile_nav mobile_nav_hide">
+    <ul class="mobile_nav_list">
+      <li class="mobile_nav_item">
+        <a href="index.html" class="mobile_nav_link">Home</a>
+      </li>
+      <li class="mobile_nav_item">
+        <a href="#" class="mobile_nav_link">About</a>
+      </li>
+      <li class="mobile_nav_item">
+        <a href="#" class="mobile_nav_link">Contact</a>
+      </li>
+      <li class="mobile_nav_item">
+        <a href="./sign-up.html" class="mobile_nav_link">Sign Up</a>
+      </li>
+      <li class="mobile_nav_item">
+        <a href="/cart.html" class="mobile_nav_link">Cart</a>
+      </li>
+    </ul>
+  </nav>
+
+  <section class="section">
+    <div class="container">
+      <div class="cart">
+        <div class="cart_header">
+          <p class="cart_header_id">Product ID</p>
+          <p class="cart_header_title">Product Title</p>
+          <p class="cart_header_image">Product Image</p>
+          <p class="cart_header_price">Price</p>
+          <p class="cart_header_delete">Delete</p>
+        </div>
+        <div class="cart-items"></div>
+        <button class="clear-cart-button">Clear Cart</button> 
+      </div>
+    </div>
+  </section>
+
+<button id="purchaseButton" class="purchase-button">Purchase</button>
+
+<div id="popup" class="popup">
+  <div class="popup-content">
+    <span id="closePopupBtn" class="close">&times;</span>
+    <h2>Order Placed Successfully!</h2>
+    <p>Thank you for shopping with Nexus Gaming</p>
+  </div>
+</div>
+
+  <footer class="footer" style="margin-top: auto;">
+    <div class="container footer_container">
+      <div class="footer_item">
+        <a href="#" class="footer_logo">NEXUS GAMING</a>
+        <div class="footer_p">
+          Your gateway to endless entertainment starts here. Find top games, consoles, and accessories for unforgettable moments with friends and family.
+        </div>
+      </div>
+      <div class="footer_item">
+        <h3 class="footer_item_titl">Support</h3>
+        <ul class="footer_list">
+          <li class="li footer_list_item">Penang, Malaysia</li>
+          <li class="li footer_list_item">nexusgaming@gmail.com</li>
+          <li class="li footer_list_item">011 555 7272</li>
+          <li class="li footer_list_item">012 333 4545</li>
+        </ul>
+      </div>
+      <div class="footer_item">
+        <h3 class="footer_item_titl">Support</h3>
+        <ul class="footer_list">
+          <li class="li footer_list_item">Account</li>
+          <li class="li footer_list_item">Login / Register</li>
+          <li class="li footer_list_item">Cart</li>
+          <li class="li footer_list_item">Shop</li>
+        </ul>
+      </div>
+      <div class="footer_item">
+        <h3 class="footer_item_titl">Support</h3>
+        <ul class="footer_list">
+          <li class="li footer_list_item">Privacy policy</li>
+          <li class="li footer_list_item">Terms of use</li>
+          <li class="li footer_list_item">FAQ's</li>
+          <li class="li footer_list_item">Contact</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer_bottom">
+      <div class="container footer_bottom_container">
+        <p class="footer_copy">
+          Copyright Nexus Gaming 2024. All rights reserved
+        </p>
+      </div>
+    </div>
+  </footer>
+  <script src="./js/cart.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const clearCartButton = document.querySelector('.clear-cart-button');
+      const cartItems = document.querySelector('.cart-items');
+
+      clearCartButton.addEventListener('click', function () {
+
+        cartItems.innerHTML = '';
+      });
+    });
+  </script>
+</body>
+</html>

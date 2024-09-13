@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Welcome to the Mall</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <script type="importmap">
+        {
+          "imports": {
+            "three": "https://unpkg.com/three@v0.163.0/build/three.module.js",
+            "three/addons/": "https://unpkg.com/three@v0.163.0/examples/jsm/"
+          }
+        }
+    </script>
+</head>
+<body>
+
+  <!-- Menu Button and Dropdown -->
+  <div id="menuContainer">
+    <button id="menuButton" class="fancy-button">☰ Menu</button>
+    <div id="dropdownMenu" class="dropdown hidden">
+      <a href="./index.html" class="dropdown-item">Home</a>
+      <a href="./explore.html" class="dropdown-item">Explore</a>
+      <a href="./events.html" class="dropdown-item">Events</a>
+      <a href="./about.html" class="dropdown-item">About Us</a>
+      <a href="./contact.html" class="dropdown-item">Contact Us</a>
+    </div>
+  </div>
+
+  <!-- Loading Screen -->
+  <div id="loadingScreen" class="loading-screen">
+    <div class="body">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <div class="base">
+        <span></span>
+        <div class="face"></div>
+      </div>
+    </div>
+    <div class="longfazers">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <h1>Redirecting</h1>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <h2> </h2>
+  </header>
+
+    <!-- Running Headline -->
+  <div class="running-headline">
+    <div class="text">Welcome to our mall, where shopping meets excitement! Explore top brands, enjoy delicious dining, and discover unforgettable experiences—all under one roof! &nbsp; </div>
+  </div>
+
+  <!-- Main Content -->
+  <main>
+    <div id="container3D"></div>
+  </main>
+
+  <!-- Bottom Center Button -->
+  <button id="bottomCenterButton" onclick="location.href='explore.html'">Explore</button>
+
+
+  <div id="objectContainer" style="display: none;">
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.24/build/spline-viewer.js"></script>
+   
+    <div class="text-content">Hi there</div>
+
+    
+    <div class="spline-container">
+      <spline-viewer loading-anim-type="spinner-small-dark" url="https://prod.spline.design/kzSZHff0Zu4FFj5V/scene.splinecode"></spline-viewer>
+    </div>
+  </div>
+  
+
+  <!-- Background Music -->
+  <audio id="backgroundMusic" src="music.mp3" autoplay loop>
+    Your browser does not support the audio element.
+  </audio>
+
+  
+  <!-- Script Links -->
+  <script type="module" src="./js/main.js"></script>
+  <script src="./js/loadingScreen.js"></script>
+  <script src="./js/button.js"></script>
+
+
+
+  <script type="module">
+    import Chatbot from "https://cdn.jsdelivr.net/gh/Okc1107/FlowiseChatEmbed@latest/dist/web.js";
+    
+    Chatbot.init({
+      chatflowid: "f2a75893-ddfc-417e-a92d-24d184a48f4b",
+      apiHost: "http://localhost:3000",
+      theme: {
+        "button": {
+          "backgroundColor": "#3B81F6",
+          "right": 20,
+          "bottom": 20,
+          "size": "medium",
+          "iconColor": "white",
+          "customIconSrc": "https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/google-messages.svg"
+        },
+        "chatWindow": {
+          "welcomeMessage": "Hello! Welcome to the mall!",
+          "backgroundColor": "#dcfaff",
+          "height": 700,
+          "width": 400,
+          "fontSize": 16,
+          "poweredByTextColor": "#dcfaff",
+          "botMessage": {
+            "backgroundColor": "black",
+            "textColor": "white",
+            "showAvatar": false,
+            "avatarSrc": "https://raw.githubusercontent.com/zahidkhawaja/langchain-chat-nextjs/main/public/parroticon.png"
+          },
+          "userMessage": {
+            "backgroundColor": "#3B81F6",
+            "textColor": "#ffffff",
+            "showAvatar": true,
+            "avatarSrc": "https://raw.githubusercontent.com/zahidkhawaja/langchain-chat-nextjs/main/public/usericon.png"
+          },
+          "textInput": {
+            "placeholder": "Ask me anything!",
+            "backgroundColor": "#ffffff",
+            "textColor": "#303235",
+            "sendButtonColor": "#3B81F6"
+          }
+        }
+      },
+      onLoad: () => {
+        // Speak the welcome message when the chatbot loads
+        const welcomeMessage = "Hello! Welcome to the mall!";
+        const welcomeSpeech = new SpeechSynthesisUtterance(welcomeMessage);
+        welcomeSpeech.lang = "en-US"; // You can change the language if needed
+        speechSynthesis.speak(welcomeSpeech);
+      },
+      onResponse: (response) => {
+        // Extract the chatbot's response message
+        const botMessage = response?.message || "";
+  
+        // Function to speak the chatbot's response
+        if (botMessage) {
+          const speech = new SpeechSynthesisUtterance(botMessage);
+          speech.lang = "en-US";  // Change language if needed
+          speech.pitch = 1;       // Adjust pitch if needed
+          speech.rate = 1;        // Adjust speech rate if needed
+          speechSynthesis.speak(speech);
+        }
+      }
+    });
+  </script>
+  
+
+  
+
+  <!--mixtral-->
+  <!-- <script type="module">
+    import Chatbot from "https://cdn.jsdelivr.net/gh/Okc1107/FlowiseChatEmbed@latest/dist/web.js";
+    Chatbot.init({
+        chatflowid: "f2a75893-ddfc-417e-a92d-24d184a48f4b",
+        apiHost: "http://localhost:3000",
+    });
+  </script> -->
+
+
+  <!-- <script type="module">
+    import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
+    Chatbot.init({
+        chatflowid: "d6a67ff1-b0e0-4e9d-a2a0-85935f7a0690",
+        apiHost: "https://flowisetest-1a.onrender.com",
+    })
+  </script> -->
+
+
+</body>
+</html>

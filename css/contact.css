@@ -1,0 +1,160 @@
+:root {
+    --primary: #ff0185;
+    --secondary: #091126;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Ensure positioning context for background */
+    background: none; /* Remove the previous background */
+}
+
+.background-spline {
+    position: fixed; /* Cover the entire viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Ensure it’s behind other content */
+    overflow: hidden; /* Hide watermark overflow */
+}
+
+.background-spline spline-viewer {
+    width: 120%; /* Scale width to hide watermark */
+    height: 120%; /* Scale height to hide watermark */
+    transform: scale(1.2); /* Scale the background object */
+    transform-origin: center; /* Center the scaling */
+}
+
+.container {
+    height: 50vh; /* Adjusted height */
+    width: 80vw; /* Adjusted width to leave space for 3D object */
+    display: flex;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 0.2rem 0.5rem #0006;
+    position: relative;
+    z-index: 1; /* Ensure container is above the background */
+}
+
+.contact {
+    height: 100%;
+    width: 66.66%; /* 2/3 of the container width */
+    display: flex;
+    overflow: hidden;
+}
+
+.map, .form {
+    width: 50%;
+    height: 100%;
+}
+
+.map iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.form {
+    position: relative;
+    background-color: var(--secondary);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center; /* Center form content horizontally */
+}
+
+.form::before {
+    position: absolute;
+    top: 10%;
+    left: -2.8rem;
+    content: "";
+    width: 0;
+    height: 0;
+    border: 1.4rem solid transparent;
+    border-right: 1.4rem solid var(--secondary);
+}
+
+.form h1 {
+    color: #fff;
+    font-family: 'Poppins', sans-serif; /* Change to Poppins font */
+    font-weight: 500;
+    font-size: 3.5rem; /* Adjust font size */
+    padding: 2rem;
+    text-align: center; /* Center title horizontally */
+    margin-bottom: -1rem;
+}
+
+.form form {
+    padding: 0.8rem;
+    width: 90%; /* Reduce the width of the form */
+}
+
+.form input, .form textarea {
+    width: 100%;
+    padding: 0.8rem; /* Reduced padding */
+    border: 0.08rem solid var(--primary);
+    border-radius: 2rem;
+    background-color: unset;
+    color: #fff;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif; /* Change placeholder font to Poppins */
+}
+
+.form input:not(:first-child), .form textarea, .form button {
+    margin-top: 0.8rem;
+}
+
+.form textarea {
+    height: 4rem; /* Reduced height */
+    resize: none;
+}
+
+.form button {
+    background-color: var(--primary );
+    padding: 0.8rem 1.6rem; /* Reduced padding */
+    color: #fff;
+    border-radius: 2rem;
+    border: none;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif; /* Change placeholder font to Poppins */
+}
+
+.three-d-object {
+    width: 33.33%; /* 1/3 of the container width */
+    height: 100%;
+    background-color: #e3e3e3; /* White background */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    overflow: hidden; /* Hide overflow of the scaled object */
+}
+
+.three-d-object-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #333333;
+    margin-top: 20px;
+    margin-bottom: -40px;
+    text-align: left;
+    z-index: 1;
+}
+
+spline-viewer {
+    width: 100%;
+    height: 100%;
+    transform: scale(1) translateY(56px); /* Increase scale for larger model */
+    transform-origin: center; /* Ensure scaling is centered */
+    z-index: 0;
+}

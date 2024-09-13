@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/events.css">
+    <link rel="stylesheet" href="./css/menu.css">
+</head>
+<body>
+
+    <div id="menuContainer">
+        <button id="menuButton" class="fancy-button">☰ Menu</button>
+        <div id="dropdownMenu" class="dropdown hidden">
+            <a href="./index.html" class="dropdown-item">Home</a>
+            <a href="./explore.html" class="dropdown-item">Explore</a>
+            <a href="./events.html" class="dropdown-item">Events</a>
+            <a href="./about.html" class="dropdown-item">About Us</a>
+            <a href="./contact.html" class="dropdown-item">Contact Us</a>
+        </div>
+    </div>
+
+    <!-- Background Object -->
+    <div class="background-container">
+        <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.21/build/spline-viewer.js"></script>
+        <spline-viewer loading-anim-type="spinner-small-dark" url="https://prod.spline.design/8VBSgNzCLsSvO9ag/scene.splinecode"></spline-viewer>
+    </div>
+
+    <!-- Header with Title and Countdown Timer -->
+    <div class="header-container">
+        <h1>Limited Time Offers!</h1>
+        <div id="countdown"></div>
+    </div>
+
+    <!-- Container 1 -->
+    <div class="container">
+        <div class="object-container left">
+            <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.21/build/spline-viewer.js"></script>
+            <spline-viewer loading-anim-type="spinner-small-dark" url="https://prod.spline.design/sxL8-WfyfLjg4qkV/scene.splinecode"></spline-viewer>
+        </div>
+        <div class="text-container right">
+            <div class="text-content">
+                <h1>50% Off Mastercard Credit Cards!</h1>
+                <p>Unlock the best in shopping with our exclusive Mastercard offer. Sign up today and enjoy 5% cashback on all purchases, plus up to 50% off select brands. As a cardholder, you'll also get VIP access to events and special promotions. Don’t wait—apply now and start saving with every swipe!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Container 2 -->
+    <div class="container">
+        <div class="text-container left">
+            <div class="text-content">
+                <h1>Upgrade to SkillMaster Pro or Team Plan!</h1>
+                <p>Take your learning to the next level with SkillMaster's premium plans. Upgrade to the <strong>Pro Plan for $25/month</strong> and get unlimited access to advanced courses, personalized feedback, and exclusive content. Want to bring your team along? The <strong>Team Plan at $35/month</strong> gives you and your colleagues all the benefits of Pro, plus collaborative tools and group coaching sessions. Join SkillMaster today and accelerate your skills with real-world knowledge from industry experts!</p>
+            </div>
+        </div>
+        <div class="object-container right">
+            <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.21/build/spline-viewer.js"></script>
+            <spline-viewer loading-anim-type="spinner-small-dark" url="https://prod.spline.design/KPLtL2jJxivVIUu6/scene.splinecode"></spline-viewer>
+        </div>
+    </div>
+
+    <!-- Container 3 -->
+    <div class="container">
+        <div class="object-container left">
+            <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.21/build/spline-viewer.js"></script>
+            <spline-viewer loading-anim-type="spinner-small-dark" url="https://prod.spline.design/5cqSjtvzVHn9E3ql/scene.splinecode"></spline-viewer>
+        </div>
+        <div class="text-container right">
+            <div class="text-content">
+                <h1>Upgrade to the New iPhone at iStore!</h1>
+                <p>Get the latest iPhone at iStore with $100 off your purchase. Featuring a stunning 6.1-inch display and A15 Bionic chip, it's the future of smartphones. Visit us today to trade in your old phone and get up to $300 in trade-in credit. Hurry, limited stock available!</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('menuButton').addEventListener('click', function() {
+            var dropdownMenu = document.getElementById('dropdownMenu');
+            dropdownMenu.classList.toggle('visible');
+            dropdownMenu.classList.toggle('hidden');
+        });
+
+        // Countdown Timer Script
+        var countDownDate = new Date().getTime() + (60 * 24 * 60 * 60 * 1000); // 60 days from now
+
+        var countdownFunction = setInterval(function() {
+            var now = new Date().getTime();
+            var distance = countDownDate - now;
+
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("countdown").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+
+            if (distance < 0) {
+                clearInterval(countdownFunction);
+                document.getElementById("countdown").innerHTML = "EXPIRED";
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
